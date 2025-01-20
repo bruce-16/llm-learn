@@ -7,4 +7,4 @@ def get_openai_key():
 
 def get_proxy():
     _ = load_dotenv(find_dotenv())
-    return os.environ['HTTPS_PROXY']
+    return os.environ.get('HTTPS_PROXY', '')

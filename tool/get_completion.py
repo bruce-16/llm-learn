@@ -2,7 +2,9 @@ import os
 from openai import OpenAI
 from .dotenv import get_openai_key, get_proxy
 
-os.environ['HTTPS_PROXY'] = get_proxy()   # 根据你的实际代理地址修改
+proxy = get_proxy()
+if proxy:
+    os.environ['HTTPS_PROXY'] = proxy
 
 client = OpenAI(
     api_key=get_openai_key(),  # This is the default and can be omitted
