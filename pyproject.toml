@@ -4,12 +4,16 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
 openai = "^1.24.0"
 python-dotenv = "^1.0.0"
 requests = "^2.32.3"
+fastapi = "^0.115.7"
+uvicorn = "^0.34.0"
+aiohttp = "^3.11.11"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
